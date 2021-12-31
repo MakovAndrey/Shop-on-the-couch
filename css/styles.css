@@ -9,6 +9,10 @@
     --footer-text-color: #FBFBFB;
     --sales-text-color:#FFFFFF;
     --product-item-description:#F8F8F8;
+    --header__menu-img:#E8E8E8;
+    --registration-form-inp: #A4A4A4;
+    --registration-form-text: #B1B1B1;
+    --btn-hover: #E05C6E;
 }
 
 body {
@@ -58,6 +62,8 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
+    cursor: pointer;
+    position: relative;
 }
 
 .header__menu-account-shopcart {
@@ -66,22 +72,155 @@ body {
     gap: 20px;
 }
 
-.header__nav {
+.header__search {
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+}
+
+.header__search_btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 25px 0 0;
+}
+
+.header__search_inp {
+    background-color: #E1E1E1;
+    border-radius: 25px 25px 25px 25px;
+    border: none;
+    padding: 5px 15px;
+    opacity: 0.67;
+    width: 210px;
+    height: 25px;
     display: none;
+    position: absolute;
+}
+
+.header__inp_on {
+    display: block;
+    margin: 0 0 0 50px;
+}
+
+.header__search_img {
+    fill: var(--header__menu-img);
+}
+
+.header__search_img:hover {
+    fill: var(--btn-hover);
+}
+
+.header__search_img:focus {
+    fill: var(--btn-hover);
+}
+
+.header__menu_img {
+    fill: var(--header__menu-img);
+}
+
+.header__menu_img:hover {
+    fill: var(--btn-hover);
+}
+
+.header__menu_img:focus {
+    fill: var(--btn-hover);
+}
+
+.header__link_img {
+    fill: var(--header__menu-img);
+}
+
+.header__link_img:hover {
+    fill: var(--btn-hover);
+}
+
+.header__link_img:focus {
+    fill: var(--btn-hover);
+}
+
+.header__link {
+    cursor: pointer;
+}
+
+.nav__item {
+    margin: 12px 0 0 0;
+}
+
+.nav__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 0 24px 0;
+}
+
+.nav__sub-item_list {
+    margin: 0 0 0 24px;
+}
+
+.nav__item_link {
+    color: #F16D7F;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.nav__sub-item {
+    margin: 0 0 11px 0;
+}
+
+.nav__sub-item:first-child {
+    margin: 11px 0 11px 0;
+}
+
+.nav__sub-item_link {
+    color: #6F6E6E;
+    text-decoration: none;
+}
+
+.nav__sub-item_link:hover {
+    cursor: pointer;
+}
+
+.nav__sub-item_link:focus {
+    cursor: pointer;
+}
+
+.nav {
+    background-color: #fff;
+    padding: 38px 34px;
+    height: 100%;
+    min-height: 764px;
+    width: 100%;
+    max-width: 232px;
+    position: absolute;
+    top: 75px;
+    transition: right .7s linear;
+    display: none;
+}
+
+.display-block {
+    right: 0; 
+    display: block;
 }
 
 .header__menu-btn {
     background-color: transparent;
     border: none;
-    position: relative;
     width: 32px;
     height: 32px;
     cursor: pointer;
 }
 
+.header__menu-img {
+    fill: var(--header__menu-img);
+}
+
 /*--------MAIN--------*/
+.active {
+    background-color: linear-gradient(rgba(0, 0, 0, 0.5));
+    transition:  .4s linear;
+}
+
 .brand {
-    background-color: var(--pink-bkg);
+    background: var(--pink-bkg);
     margin: 0 0 65px 0;
 }
 
@@ -89,7 +228,6 @@ body {
     flex-grow: 1;
     display: flex;
     align-items: center;
-    
 }
 
 .brand__title {
@@ -148,7 +286,11 @@ body {
     right: 0;
     background-color: rgba(33,22,22,.7);
     z-index: 2;
-    transition: background-color .5s linear;
+    transition: background-color .3s linear;
+}
+
+.sales__item:hover::before {
+    background-color: rgba(33, 22, 22, 0);
 }
 
 .sales__item:last-child {
@@ -187,6 +329,10 @@ body {
 
 .sales__item_accesories {
     background-image: url(../img/sales-accesories.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 180px;
 }
 
 .product__header {
@@ -230,6 +376,46 @@ body {
     height: 580px;
     box-sizing: border-box;
     background-color: var(--product-item-description);
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+
+.product__item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 420px;
+    background-color: rgba(58, 56, 56, 0.86);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+}   
+
+.product__item:hover .product__item-overlay {
+    opacity: 1;
+}
+
+.product__item:focus .product__item-overlay {
+    opacity: 1;
+}
+
+.product__item-img {
+    position: relative;
+}
+
+.product__item-overlay-btn {
+    border: 1px solid var(--sales-text-color);
+    color: var(--sales-text-color);
+    background:transparent ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 11px;
+    padding: 10px 14px;
 }
 
 .product__item-par {
@@ -258,7 +444,12 @@ body {
     text-decoration: none;
 }
 
-.product__link:hover{
+.product__link:hover {
+    background-color: var(--pink-color);
+    color: var(--sales-text-color);
+}
+
+.product__link:focus {
     background-color: var(--pink-color);
     color: var(--sales-text-color);
 }
@@ -304,7 +495,7 @@ body {
 
 /*--------FOOTER--------*/
 
-.footer__top {
+.footer__revie-and-sub {
     background-image: url(../img/footer-background-img.svg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -379,14 +570,18 @@ body {
 }
 
 .subscribe__form-btn:hover {
-    background-color: #E05C6E;
+    background-color:var(--btn-hover) ;
+}
+
+.subscribe__form-btn:focus {
+    background-color:var(--btn-hover) ;
 }
 
 .footer__wrapper {
     background-color: var(--black);
 }
 
-.footer__bottom {
+.footer__rights-and-social {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -413,10 +608,137 @@ body {
     background-color: var(--sales-text-color);
     width: 30px;
     height: 30px;
-    color: var(--black-header-color);
-    /* fill: var(--black-header-color); */
+    fill: var(--black-header-color);
 }
+
 .footer__social-media-link:hover {
     background-color: var(--pink-color);
-    color: var(--pink-color);
+    fill: var(--sales-text-color);
+}
+
+.footer__social-media-link:focus {
+    background-color: var(--pink-color);
+    fill: var(--sales-text-color);
+}
+
+/*--------Registration.HTML--------*/
+
+.registraion__header {
+    min-height: 148px;
+    background-color: var(--pink-bkg);
+}
+.registration__header-txt {
+    text-transform: uppercase;
+    text-align: start;
+    padding: 60px 0 0 0;
+}
+
+.registration {
+    display: flex;
+    justify-content: space-between;
+    margin: 64px auto 96px auto;
+}
+
+.registraion__form {
+    margin: 0 125px 0 0;
+}
+
+.registraion__form-radio {
+    margin: 0 10px 0 0;
+    width: 17px;
+    height: 17px;
+}
+
+.radio-label {
+    margin: 0 20px 0 0;
+    font-size: 11px;
+    line-height: 13px;
+}
+
+.registraion__form-fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.registraion__form-inp {
+    padding: 14px 176px 14px 17px;
+    border: 1px solid;
+    border-color: var(--registration-form-inp);
+    margin: 0 0 21px 0;
+}
+
+.registration__form-legend {
+    margin: 0 0 21px 0;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.registraion__form-gender {
+    margin: 34px 0 34px 0;
+    align-items: center;
+    display: flex;
+}
+
+.registraion__form-btn {
+    margin: 39px 0 0 0;
+    background-color:var(--pink-color);
+    border: none;
+    padding: 17px 29px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.registraion__form-btn:hover {
+    background-color: var(--btn-hover)
+}
+
+.registraion__form-btn:focus {
+    background-color: var(--btn-hover)
+}
+
+.registraion__form-btn-img {
+    fill: var(--sales-text-color);
+    padding: 0 0 0 20px;
+}
+
+.registraion__form-text {
+    font-size: 13px;
+    color:var(--registration-form-text);
+}
+
+.registration__description {
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--black-header-color);
+    font-weight: 300;
+}
+
+.registration__description-header {
+    text-transform: uppercase;
+    margin: 0 0 22px 0;
+}
+
+.registration__description-text {
+    margin: 0 0 22px 0;
+}
+
+.registration__description-item {
+    position: relative;
+    margin: 0 0 16px 0;
+    padding: 0 0 0 43px;
+
+}
+
+.registration__description-item:before {
+    content: '';
+    width: 20px;
+    height: 16px;
+    position: absolute;
+    background-image: url(../img/сheck-mark.svg);
+    background-size: 20px 16px;
+    background-color: transparent;
+    padding: 0 22px 0 0;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 8px;
 }

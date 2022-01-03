@@ -1,0 +1,79 @@
+.sales {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 0 97px 0;
+    }
+
+    &__item {
+        width: 360px;
+        min-height: 260px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid;
+        flex-direction: column;
+        box-sizing: border-box;
+        border: none;
+        position: relative;
+
+        &::before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(33,22,22,.7);
+            z-index: 2;
+            transition: background-color .3s linear;
+        }
+
+        &:hover::before {
+            background-color: rgba(33, 22, 22, 0);
+        }
+
+        &:last-child {
+            width: 100%;
+            margin: 30px 0 0 0;
+        }
+
+        &-par {
+            color: $sales-text-color;
+            text-transform: uppercase;
+            z-index: 3;
+            line-height: 19px;
+            font-size: 16px;
+        }
+
+        &-header {
+            color: $pink-color;
+            text-transform: uppercase;
+            z-index: 3;
+            font-size: 24px;
+            line-height: 28px;
+            margin: 10px 0 0 0;
+        }
+
+        &_woman {
+            background-image: url(../img/sales-woman.jpg);
+        }
+
+        &_man {
+            background-image: url(../img/sales-man.jpg);
+        }
+
+        &_kids {
+            background-image: url(../img/sales-kids.jpg);
+        }
+
+        &_accesories {
+            background-image: url(../img/sales-accesories.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 180px;
+        }
+    }
+}

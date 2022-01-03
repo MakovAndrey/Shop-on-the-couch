@@ -1,0 +1,123 @@
+.header {
+    background-color: $black;
+    max-height: 75px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding: 18px 0;
+    }
+
+    &__logo-search {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    &__search {
+        cursor: pointer;
+        align-items: center;
+        display: flex;
+
+        &_btn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0 25px 0 0;
+        }
+        
+        &_inp {
+            background-color: $header__menu-img;
+            border-radius: 25px 25px 25px 25px;
+            border: none;
+            padding: 5px 15px;
+            opacity: 0.67;
+            width: 210px;
+            height: 25px;
+            display: none;
+            position: absolute;
+
+            &:hover {
+                background-color: $registration-form-inp;
+            }
+
+            &:focus {
+                background-color: $registration-form-inp;
+                outline: 1px solid $pink-color;
+                color: $footer-text-color;
+            }
+
+            &:active {
+                background-color: $prod-card-color;
+                outline: 1px solid $btn-hover;
+                color: $footer-text-color;
+            }
+        }
+
+        &_inp-on {
+            display: block;
+            margin: 0 0 0 50px;
+        }
+
+        &_img {
+            fill: $header__menu-img;
+            &:hover {
+                fill: $btn-hover;
+            }
+            &:focus {
+                fill: $btn-hover;
+            }
+            &:active{
+                fill: $btn-active;
+            }
+        }
+    }
+
+    &__menu-account-shopcart {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__menu_img {
+        fill: $header__menu-img;
+
+        &:hover {
+            fill: $btn-hover;
+        }
+        &:focus {
+            fill: $btn-hover;
+        }
+        &:active {
+            fill: $btn-active;
+        }
+    }
+
+    &__link_img {
+        fill: $header__menu-img;
+        &:hover {
+            fill: $btn-hover;
+        }
+        &:focus {
+            fill: $btn-hover;
+        }
+        &:active {
+            fill: $btn-active;
+        }
+    }
+
+    &__menu-btn {
+        background-color: transparent;
+        border: none;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+    }
+
+    &__menu-img {
+        fill: var(--header__menu-img);
+    }
+}

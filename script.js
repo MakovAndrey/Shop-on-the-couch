@@ -12,6 +12,6 @@ const headerSearchBtn = document.getElementById("header__search_btn");
 const headerSearchInp = document.getElementById("header__search_inp");
 
 headerSearchBtn.addEventListener("click", () => {
-    // headerSearchBtn.classList.add("header__inp_on");
-    headerSearchInp.classList.toggle("header__inp_on");
+    // headerSearchBtn.classList.add("header__search_inp-on");
+    headerSearchInp.classList.toggle("header__search_inp-on");
 });

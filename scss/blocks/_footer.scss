@@ -1,0 +1,149 @@
+.footer {
+    &__revie-and-sub {
+        background-image: url(../img/footer-background-img.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        align-items: center;
+    }   
+
+    &__wrapper {
+        background-color: $black;
+    }
+
+    &__rights-and-social {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 0;
+    }
+
+    &__rights {
+        color: $footer-text-color;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    &__social-media-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__social-media-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $sales-text-color;
+        width: 30px;
+        height: 30px;
+        fill: $black-header-color;
+
+        &:hover {
+            background-color: $pink-color;
+            fill: $sales-text-color;
+        }
+        &:focus {
+            background-color: $pink-color;
+            fill: $sales-text-color;
+        }
+        &:active{
+            background-color: $btn-active;
+            fill: $sales-text-color;
+        }
+    }
+
+}
+
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__header {
+        text-transform: uppercase;
+        font-size: 24px;
+        line-height: 37px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &__par {
+        text-transform: uppercase;
+        font-size: 18px;
+        line-height: 30px;
+        margin: 0 0 32px 0;
+    }
+
+    &__form {
+        display: flex;
+        
+        &-inp {
+            background-color: $header__menu-img;
+            border-radius: 25px 0 0 25px;
+            border: none;
+            padding: 10px 15px;
+            opacity: 0.67;
+            width: 210px;
+            height: 30px;
+
+            &:hover {
+                background-color: $registration-form-inp;
+            }
+
+            &:focus {
+                background-color: $registration-form-inp;
+                outline: 1px solid $pink-color;
+                color: $footer-text-color;
+            }
+
+            &:active {
+                background-color: $prod-card-color;
+                outline: 1px solid $btn-hover;
+                color: $footer-text-color;
+            }
+        }
+
+        &-btn {
+            background-color: $pink-color;
+            border-radius: 0 25px 25px 0;
+            border: none;
+            padding: 10px 15px;
+            color:  $sales-text-color;
+            font-weight: 400;
+
+            &:hover {
+                background-color: $btn-hover;
+            }
+            &:focus {
+                background-color: $btn-hover;
+            }
+            &:active {
+                background-color: $btn-active;
+            }
+        }
+    }
+}
+
+.reviews-and-subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review {
+    max-width: 360px;
+    max-height: 225px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 97px 0 126px 0;
+
+    &__par {
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: $black;
+    }
+}

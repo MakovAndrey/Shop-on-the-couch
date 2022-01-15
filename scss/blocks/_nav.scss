@@ -1,0 +1,63 @@
+.nav {
+    background-color: $sales-text-color;
+    padding: 38px 34px;
+    height: 100%;
+    min-height: 764px;
+    width: 100%;
+    max-width: 232px;
+    position: absolute;
+    top: 75px;
+    transition: right .7s linear;
+    display: none;
+
+    &__item {
+        margin: 12px 0 0 0;
+
+        &_link {
+            color: $pink-color;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0 0 24px 0;
+    }
+
+    &__sub-item {
+        margin: 0 0 11px 0;
+
+        &:first-child {
+            margin: 11px 0 11px 0;
+        }
+
+        &_list {
+            margin: 0 0 0 24px;
+        }
+
+        &_link {
+            color: $nav-link;
+            text-decoration: none;
+
+            &:hover {
+                cursor: pointer;
+                color: $nav-link-hover;
+            }
+            &:focus {
+                cursor: pointer;
+                color: $nav-link-hover;
+            }
+            &:active {
+                cursor: pointer;
+                color: $nav-link-active;
+            }
+        }
+    }
+}
+
+.display-block {
+    right: 0; 
+    display: block;
+}

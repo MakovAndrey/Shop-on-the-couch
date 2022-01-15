@@ -1,0 +1,125 @@
+.registration {
+    display: flex;
+    justify-content: space-between;
+    margin: 64px auto 96px auto;
+
+    &__header { 
+        min-height: 148px;
+        background-color: $pink-bkg;
+    }
+
+    &__header-txt {
+        text-transform: uppercase;
+        text-align: start;
+        padding: 60px 0 0 0;
+        color: $pink-color;
+    }
+
+    &__form {
+        margin: 0 125px 0 0;
+
+        &-radio {
+            margin: 0 10px 0 0;
+            width: 17px;
+            height: 17px;
+
+            &-label {
+                margin: 0 20px 0 0;
+                font-size: 11px;
+                line-height: 13px;
+            }
+        }
+
+        &-fieldset {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-inp {
+            padding: 14px 176px 14px 17px;
+            border: 1px solid;
+            border-color: $registration-form-inp;
+            margin: 0 0 21px 0;
+        }
+
+        &-legend {
+            margin: 0 0 21px 0;
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        &-gender {
+            margin: 34px 0 34px 0;
+            align-items: center;
+            display: flex;
+        }
+
+        &-btn {
+            margin: 39px 0 0 0;
+            background-color: $pink-color;
+            border: none;
+            padding: 17px 29px;
+            color: #fff;
+            font-weight: 400;
+            text-transform: uppercase;
+
+            &:hover {
+                background-color: $btn-hover;
+            }
+
+            &:focus {
+                background-color: $btn-hover;
+            }
+
+            &:active {
+                background-color: $btn-active;
+            }
+
+            &-img {
+                fill: $sales-text-color;
+                padding: 0 0 0 20px;
+            }
+        }
+
+        &-text {
+            font-size: 13px;
+            color: $registration-form-text;
+        }
+    }
+
+    &__description {
+        font-size: 24px;
+        line-height: 29px;
+        color: $black-header-color;
+        font-weight: 300;
+
+        &-header {
+            text-transform: uppercase;
+            margin: 0 0 22px 0;
+        }
+
+        &-text {
+            margin: 0 0 22px 0;
+        }
+
+        &-item {
+            position: relative;
+            margin: 0 0 16px 0;
+            padding: 0 0 0 43px;
+
+            &:before {
+                content: ' ';
+                width: 20px;
+                height: 16px;
+                position: absolute;
+                background-image: url(../img/сheck-mark.svg);
+                background-size: 20px 16px;
+                background-color: transparent;
+                padding: 0 22px 0 0;
+                background-repeat: no-repeat;
+                left: 0;
+                top: 8px;
+            }
+        }
+    }
+}

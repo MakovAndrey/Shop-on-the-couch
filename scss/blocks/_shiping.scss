@@ -1,0 +1,138 @@
+.shiping {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+        margin: 64px 0 0 0;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @include mobile {
+        margin: 48px 0 0 0;
+        flex-direction: column;
+    }
+
+    &__form {
+        flex-direction: column;
+        display: flex;
+
+        @include tablet {
+            margin: 0 15px 0 0;
+            width: 46%;
+        }
+
+        &_header {
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 300;
+            color: $black;
+            text-transform: uppercase;
+            margin: 0 0 20px 0;
+        }
+
+        &_inp {
+            min-width: 360px;
+            height: 45px;
+            padding: 0 16px;
+            margin: 0 0 20px 0;
+            border: 1px solid $cart-txt-fill;
+            background-color: $sales-text-color;
+
+            &:hover {
+                background-color: $registration-form-text;
+                border: 1px solid $nav-link;
+            }
+            
+            &:focus {
+                background-color: $registration-form-text;
+                border: 1px solid $nav-link;
+            }
+
+            &:active{
+                background-color: $registration-form-inp;
+                border: 1px solid $nav-link;
+            }
+        }
+
+        &_btn {
+            border: 1px solid $registration-form-inp;
+            background: transparent;
+            font-size: 11px;
+            line-height: 13px;
+            text-transform: uppercase;
+            color: $black-header-color;
+            font-weight: 300;
+            max-width: 100px;
+            height: 35px;
+            font-family: Lato;
+
+            &:hover {
+                border: none;
+                background-color: $btn-hover;
+                color: $header__menu-img;
+            }
+
+            &:focus {
+                border: none;
+                background-color: $btn-hover;
+                color: $header__menu-img;
+            }
+
+            &:active {
+                border: none;
+                background-color: $btn-active;
+                color: $header__menu-img;
+            }
+        }
+    }
+
+    &__checkout{
+
+        &-card {
+        height: 214px;
+        margin: 57px 0 0 0;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background-color: #F5F3F3;
+
+            @include tablet {
+                width: 46%;
+                margin: 37px 0 0 0;
+            }
+
+            @include mobile {
+                margin: 45px 0 0 0;
+                width: 96%;
+            }
+        }
+    
+
+        &-price {
+            border-bottom: 1px solid #E2E2E2;
+        }
+
+        &_sub-price{
+            font-size: 11px;
+            line-height: 13px;
+            color: $registration-form-inp;
+            text-transform: uppercase;
+            margin: 40px 34px 12px 210px;
+            font-weight: 400;
+        }
+
+        &_total-price {
+            font-size: 16px;
+            line-height: 19px;
+            color: $black;
+            text-transform: uppercase;
+            margin: 0 37px 21px 150px;
+            font-weight: 300;
+        }
+    }
+
+    &__price {
+        padding: 0 0 0 20px;
+    }
+}

@@ -4,10 +4,20 @@
         flex-wrap: wrap;
         justify-content: space-between;
         margin: 0 0 97px 0;
+
+        @include tablet {
+
+        }
+
+        @include mobile {
+            flex-direction: column;
+            margin: 0 0 64px 0;
+            align-items: center;
+        }
     }
 
     &__item {
-        width: 360px;
+        width: 31.5%;
         min-height: 260px;
         display: flex;
         align-items: center;
@@ -17,6 +27,19 @@
         box-sizing: border-box;
         border: none;
         position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include tablet {
+            width: 31.5%;
+            min-height: 161px;
+        }
+
+        @include mobile {
+            width: 100%;
+            margin: 0 0 32px 0;
+            min-height: 249px;
+        }
 
         &::before {
             content: " ";
@@ -32,11 +55,6 @@
 
         &:hover::before {
             background-color: rgba(33, 22, 22, 0);
-        }
-
-        &:last-child {
-            width: 100%;
-            margin: 30px 0 0 0;
         }
 
         &-par {
@@ -71,9 +89,20 @@
         &_accesories {
             background-image: url(../img/sales-accesories.jpg);
             background-position: center;
-            background-size: cover;
             background-repeat: no-repeat;
-            height: 180px;
+            min-height: 180px;
+            width: 100%;
+            margin: 30px 0 0 0;
+
+            @include tablet {
+            min-height: 116px;
+            margin: 30px 0 0 0;
+            }
+
+            @include mobile {
+            min-height: 111px;
+            margin: 0;
+            }
         }
     }
 }

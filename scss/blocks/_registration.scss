@@ -2,6 +2,14 @@
     display: flex;
     justify-content: space-between;
     margin: 64px auto 96px auto;
+    
+    @include tablet {
+        
+    }
+
+    @include mobile {
+        flex-direction: column;
+    }
 
     &__header { 
         min-height: 148px;
@@ -13,10 +21,18 @@
         text-align: start;
         padding: 60px 0 0 0;
         color: $pink-color;
+
+        @include mobile {
+            text-align: center;
+        }
     }
 
     &__form {
         margin: 0 125px 0 0;
+
+        @include tablet {
+            margin: 0 25px 0 0;
+        }
 
         &-radio {
             margin: 0 10px 0 0;
@@ -63,6 +79,10 @@
             font-weight: 400;
             text-transform: uppercase;
 
+            @include mobile {
+                margin: 40px 0 40px 0;
+            }
+
             &:hover {
                 background-color: $btn-hover;
             }
@@ -93,9 +113,22 @@
         color: $black-header-color;
         font-weight: 300;
 
+        @include tablet {
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: normal;
+        }
+
+        @include mobile {
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: normal;
+        }
+
         &-header {
             text-transform: uppercase;
             margin: 0 0 22px 0;
+            font-weight: 300;
         }
 
         &-text {

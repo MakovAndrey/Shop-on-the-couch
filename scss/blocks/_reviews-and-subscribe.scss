@@ -1,0 +1,13 @@
+.reviews-and-subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+        flex-direction: column;
+    }
+
+    @include mobile {
+        flex-direction: column;
+    }
+}

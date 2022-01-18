@@ -1,0 +1,77 @@
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__header {
+        text-transform: uppercase;
+        font-size: 24px;
+        line-height: 37px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &__par {
+        text-transform: uppercase;
+        font-size: 18px;
+        line-height: 30px;
+        margin: 0 0 32px 0;
+    }
+
+    &__form {
+        display: flex;
+        
+        &-inp {
+            background-color: $header__menu-img;
+            border-radius: 25px 0 0 25px;
+            border: none;
+            padding: 10px 15px;
+            opacity: 0.67;
+            width: 210px;
+            height: 30px;
+
+            &:hover {
+                background-color: $registration-form-inp;
+            }
+
+            &:focus {
+                background-color: $registration-form-inp;
+                outline: 1px solid $pink-color;
+                color: $footer-text-color;
+            }
+
+            &:active {
+                background-color: $prod-card-color;
+                outline: 1px solid $btn-hover;
+                color: $footer-text-color;
+            }
+        }
+
+        &-btn {
+            background-color: $pink-color;
+            border-radius: 0 25px 25px 0;
+            border: none;
+            padding: 10px 15px;
+            color:  $sales-text-color;
+            font-weight: 400;
+
+            &:hover {
+                background-color: $btn-hover;
+            }
+            &:focus {
+                background-color: $btn-hover;
+            }
+            &:active {
+                background-color: $btn-active;
+            }
+        }
+
+        @include tablet {
+            margin: 0 0 140px 0;
+        }
+
+        @include mobile {
+            margin: 0 0 109px 0;
+        }
+    }
+}

@@ -9,7 +9,7 @@
     &__text {
         color: #9f9f9f;
         text-align: center;
-        margin-bottom: 48px;
+        margin: 0 0 48px 0;
     }
 
     &__list {
@@ -17,11 +17,24 @@
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 30px;
-        margin-bottom: 48px;
+        margin: 0 0 48px 0;
+
+        @include tablet {
+            gap: 16px;
+            margin: 0 0 32px 0;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin: 0 0 41px 0;
+        }
     }
 
     &__item {
-        width: 360px;
+        width: 31.5%;
+        min-width: 360px;
         height: 580px;
         box-sizing: border-box;
         background-color: $product-item-description;
@@ -55,6 +68,7 @@
                 align-items: center;
                 gap: 11px;
                 padding: 10px 14px;
+                cursor: pointer;
             }
         }
 
@@ -112,6 +126,14 @@
             display: flex;
             justify-content: center;
             margin: 0 auto 96px auto;
+
+            @include tablet {
+                margin: 0 auto 65px auto;
+            }
+
+            @include mobile {
+                margin: 0 auto 96px auto;
+            }
         }
     }
 }

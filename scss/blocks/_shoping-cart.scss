@@ -3,6 +3,16 @@
     justify-content: space-between;
     margin: 96px auto 128px auto;
 
+    @include tablet {
+        flex-direction: column;
+        margin: 59px auto 128px auto;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        margin: 39px auto 96px auto;
+    }
+
     &__list{
         display: flex;
         flex-direction: column;
@@ -11,10 +21,18 @@
     &__item {
         display: flex;
         justify-content: start;
-        max-width: 652px;
+        min-width: 57%;
         max-height: 306px;
         margin: 0 0 40px 0;
         box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
 
         &_header {
             font-size: 24px;
@@ -38,7 +56,7 @@
 
         &_description{
             margin: 22px 0 0 31px;
-            max-width: 250px;
+            min-width: 60%;
         }
 
         &_close-btn {
@@ -49,6 +67,16 @@
             border: none;
             outline: none;
             margin: 28px 22px 0 57px;
+
+            @include tablet {
+                // margin: 28px 24px 0 0;
+                top: 28px;
+                right: 24px;
+            }
+
+            @include mobile {
+                margin: 17px 12px 0 0;
+            }
 
             &:hover {
                 fill: $btn-hover;
@@ -130,116 +158,3 @@
     }
 }
 
-.shiping {
-    display: flex;
-    flex-direction: column;
-
-    &__form {
-        flex-direction: column;
-        display: flex;
-
-        &_header {
-            font-size: 16px;
-            line-height: 19px;
-            font-weight: 300;
-            color: $black;
-            text-transform: uppercase;
-            margin: 0 0 20px 0;
-        }
-
-        &_inp {
-            width: 360px;
-            height: 45px;
-            padding: 0 16px;
-            margin: 0 0 20px 0;
-            border: 1px solid $cart-txt-fill;
-            background-color: $sales-text-color;
-
-            &:hover {
-                background-color: $registration-form-text;
-                border: 1px solid $nav-link;
-            }
-            
-            &:focus {
-                background-color: $registration-form-text;
-                border: 1px solid $nav-link;
-            }
-
-            &:active{
-                background-color: $registration-form-inp;
-                border: 1px solid $nav-link;
-            }
-        }
-
-        &_btn {
-            border: 1px solid $registration-form-inp;
-            background: transparent;
-            font-size: 11px;
-            line-height: 13px;
-            text-transform: uppercase;
-            color: $black-header-color;
-            font-weight: 300;
-            width: 100px;
-            height: 35px;
-            font-family: Lato;
-
-            &:hover {
-                border: none;
-                background-color: $btn-hover;
-            color: $header__menu-img;
-            }
-
-            &:focus {
-                border: none;
-                background-color: $btn-hover;
-                color: $header__menu-img;
-            }
-
-            &:active {
-                border: none;
-                background-color: $btn-active;
-                color: $header__menu-img;
-            }
-        }
-    }
-
-    &__checkout{
-
-        &-card {
-        width: 360px;
-        height: 214px;
-        margin: 57px 0 0 0;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        background-color: #F5F3F3;
-        }
-    
-
-        &-price {
-            border-bottom: 1px solid #E2E2E2;
-        }
-
-        &_sub-price{
-            font-size: 11px;
-            line-height: 13px;
-            color: $registration-form-inp;
-            text-transform: uppercase;
-            margin: 40px 34px 12px 210px;
-            font-weight: 400;
-        }
-
-        &_total-price {
-            font-size: 16px;
-            line-height: 19px;
-            color: $black;
-            text-transform: uppercase;
-            margin: 0 37px 21px 150px;
-            font-weight: 300;
-        }
-    }
-
-    &__price {
-        padding: 0 0 0 20px;
-    }
-}

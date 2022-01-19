@@ -7,6 +7,14 @@
         justify-content: space-between;
         gap: 30px;
         align-items: center;
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        @include mobile {
+            flex-direction: column;
+        }
     }
 
     &__item {

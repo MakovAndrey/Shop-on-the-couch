@@ -1,15 +1,37 @@
 .brand {
     background: $pink-bkg;
     margin: 0 0 65px 0;
+    
 
     &__img {
-        margin: 0 0 -35px -225px;
+        // margin: 0 0 0 -225px;
+        
+        @include tablet {
+            height: 367px;
+            width: 50%;
+        }
+
+        @include mobile {
+            display: none;
+        }
     }
     
     &__wrp {
         flex-grow: 1;
         display: flex;
         align-items: center;
+        height: 765px;
+        justify-content: space-between;
+
+        @include tablet {
+            height: 367px;
+        }
+
+        @include mobile {
+            height: 367px;
+            align-self: center;
+            justify-content: center;
+        }
     }
 
     &__title {
@@ -20,7 +42,19 @@
         border-left: solid 12px;
         padding: 0 0 0 15px;
         border-color: $pink-color;
-        margin: 0 0 0 80px;
+        width: 50%;
+
+        @include tablet {
+            font-size: 44px;
+            line-height: 52px;
+        }
+
+        @include mobile {
+            font-size: 38px;
+            line-height: 45px;
+            width: 236px;
+            text-align: center;
+        }
 
         &_subtitle {
             font-size: 32px;
@@ -28,6 +62,16 @@
             font-weight: 700;
             line-height: 38px;
             display: block;
+
+            @include tablet {
+                font-size: 24px;
+                line-height: 28px;
+            }
+
+            @include mobile {
+                font-size: 20px;
+                line-height: 24px;
+            }
 
             &-pink {
                 color: $pink-color;

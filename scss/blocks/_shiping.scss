@@ -19,7 +19,11 @@
 
         @include tablet {
             margin: 0 15px 0 0;
-            width: 46%;
+            width: 50%;
+        }
+
+        @include mobile {
+            width: 100%;
         }
 
         &_header {
@@ -32,7 +36,6 @@
         }
 
         &_inp {
-            min-width: 360px;
             height: 45px;
             padding: 0 16px;
             margin: 0 0 20px 0;
@@ -90,7 +93,7 @@
     &__checkout{
 
         &-card {
-        height: 214px;
+        min-height: 214px;
         margin: 57px 0 0 0;
         align-items: center;
         display: flex;
@@ -98,7 +101,7 @@
         background-color: #F5F3F3;
 
             @include tablet {
-                width: 46%;
+                width: 50%;
                 margin: 37px 0 0 0;
             }
 
@@ -106,19 +109,20 @@
                 margin: 45px 0 0 0;
                 width: 96%;
             }
+
+            &-fucking-line{
+                background-color: #E2E2E2;
+                width: 95%;
+            }
         }
     
-
-        &-price {
-            border-bottom: 1px solid #E2E2E2;
-        }
-
         &_sub-price{
             font-size: 11px;
             line-height: 13px;
             color: $registration-form-inp;
             text-transform: uppercase;
-            margin: 40px 34px 12px 210px;
+            margin: 40px 0 12px 0;
+            text-align: end;
             font-weight: 400;
         }
 
@@ -127,8 +131,35 @@
             line-height: 19px;
             color: $black;
             text-transform: uppercase;
-            margin: 0 37px 21px 150px;
+            margin: 0 0 21px 0;
             font-weight: 300;
+            text-align: end;
+        }
+
+        &-btn {
+            margin: 39px 0 0 0;
+            background-color: $pink-color;
+            border: none;
+            padding: 17px 29px;
+            color: #fff;
+            font-weight: 400;
+            text-transform: uppercase;
+
+            @include mobile {
+                margin: 20px 0 20px 0;
+            }
+
+            &:hover {
+                background-color: $btn-hover;
+            }
+
+            &:focus {
+                background-color: $btn-hover;
+            }
+
+            &:active {
+                background-color: $btn-active;
+            }
         }
     }
 

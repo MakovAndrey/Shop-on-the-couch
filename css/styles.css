@@ -1122,6 +1122,22 @@ body {
   }
 }
 
+.shoping-cart_wrp {
+  width: 57%;
+}
+
+@media (max-width: 1250px) {
+  .shoping-cart_wrp {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .shoping-cart_wrp {
+    width: 100%;
+  }
+}
+
 .shoping-cart__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1139,22 +1155,26 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  min-width: 57%;
+  width: 100%;
   max-height: 306px;
   margin: 0 0 40px 0;
   -webkit-box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
           box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 767px) {
   .shoping-cart__item {
-    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 0 32px 0;
   }
 }
 
 @media (max-width: 767px) {
-  .shoping-cart__item {
-    width: 100%;
+  .shoping-cart__item_img {
+    width: 143px;
+    height: 188px;
   }
 }
 
@@ -1167,6 +1187,14 @@ body {
   margin: 0 0 42px 0;
 }
 
+@media (max-width: 767px) {
+  .shoping-cart__item_header {
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0 0 25px 0;
+  }
+}
+
 .shoping-cart__item_text {
   font-size: 22px;
   line-height: 26px;
@@ -1174,30 +1202,37 @@ body {
   margin: 0 0 6px 0;
 }
 
+@media (max-width: 767px) {
+  .shoping-cart__item_text {
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 0 4px 0;
+  }
+}
+
 .shoping-cart__item_price {
   color: #F16D7F;
 }
 
 .shoping-cart__item_description {
-  margin: 22px 0 0 31px;
-  min-width: 60%;
+  margin: 20px 30px 20px 30px;
+  min-width: 40%;
+}
+
+@media (max-width: 767px) {
+  .shoping-cart__item_description {
+    margin: 10px 10px 10px 10px;
+  }
 }
 
 .shoping-cart__item_close-btn {
   fill: #575757;
-  width: 18px;
-  height: 18px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   background-color: transparent;
   border: none;
   outline: none;
-  margin: 28px 22px 0 57px;
-}
-
-@media (max-width: 1250px) {
-  .shoping-cart__item_close-btn {
-    top: 28px;
-    right: 24px;
-  }
+  margin: 28px 22px 0 5px;
 }
 
 @media (max-width: 767px) {
@@ -1259,6 +1294,12 @@ body {
   margin: 32px 0 0 0;
 }
 
+@media (max-width: 767px) {
+  .shoping-cart__btn-wrp {
+    margin: 0 auto 0 auto;
+  }
+}
+
 .shoping-cart__btn {
   padding: 17px 41px;
   border: 1px solid #A4A4A4;
@@ -1268,6 +1309,15 @@ body {
   text-transform: uppercase;
   color: #000000;
   font-family: Lato;
+}
+
+@media (max-width: 767px) {
+  .shoping-cart__btn {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 9px 17px;
+    text-transform: none;
+  }
 }
 
 .shoping-cart__btn:hover {
@@ -1483,7 +1533,13 @@ body {
 @media (max-width: 1250px) {
   .shiping__form {
     margin: 0 15px 0 0;
-    width: 46%;
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .shiping__form {
+    width: 100%;
   }
 }
 
@@ -1497,7 +1553,6 @@ body {
 }
 
 .shiping__form_inp {
-  min-width: 360px;
   height: 45px;
   padding: 0 16px;
   margin: 0 0 20px 0;
@@ -1552,7 +1607,7 @@ body {
 }
 
 .shiping__checkout-card {
-  height: 214px;
+  min-height: 214px;
   margin: 57px 0 0 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1569,7 +1624,7 @@ body {
 
 @media (max-width: 1250px) {
   .shiping__checkout-card {
-    width: 46%;
+    width: 50%;
     margin: 37px 0 0 0;
   }
 }
@@ -1581,8 +1636,9 @@ body {
   }
 }
 
-.shiping__checkout-price {
-  border-bottom: 1px solid #E2E2E2;
+.shiping__checkout-card-fucking-line {
+  background-color: #E2E2E2;
+  width: 95%;
 }
 
 .shiping__checkout_sub-price {
@@ -1590,7 +1646,8 @@ body {
   line-height: 13px;
   color: #A4A4A4;
   text-transform: uppercase;
-  margin: 40px 34px 12px 210px;
+  margin: 40px 0 12px 0;
+  text-align: end;
   font-weight: 400;
 }
 
@@ -1599,8 +1656,37 @@ body {
   line-height: 19px;
   color: #222222;
   text-transform: uppercase;
-  margin: 0 37px 21px 150px;
+  margin: 0 0 21px 0;
   font-weight: 300;
+  text-align: end;
+}
+
+.shiping__checkout-btn {
+  margin: 39px 0 0 0;
+  background-color: #F16D7F;
+  border: none;
+  padding: 17px 29px;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .shiping__checkout-btn {
+    margin: 20px 0 20px 0;
+  }
+}
+
+.shiping__checkout-btn:hover {
+  background-color: #E05C6E;
+}
+
+.shiping__checkout-btn:focus {
+  background-color: #E05C6E;
+}
+
+.shiping__checkout-btn:active {
+  background-color: #f33e5c;
 }
 
 .shiping__price {

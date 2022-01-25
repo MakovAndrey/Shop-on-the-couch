@@ -5,10 +5,6 @@
         justify-content: space-between;
         margin: 0 0 97px 0;
 
-        @include tablet {
-
-        }
-
         @include mobile {
             flex-direction: column;
             margin: 0 0 64px 0;

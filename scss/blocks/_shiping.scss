@@ -110,8 +110,8 @@
                 width: 96%;
             }
 
-            &-fucking-line{
-                background-color: #E2E2E2;
+            &-line{
+                background-color: $shiping-line;
                 width: 95%;
             }
         }
@@ -141,7 +141,7 @@
             background-color: $pink-color;
             border: none;
             padding: 17px 29px;
-            color: #fff;
+            color: $sales-text-color;
             font-weight: 400;
             text-transform: uppercase;
 

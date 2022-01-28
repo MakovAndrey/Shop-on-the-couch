@@ -1,0 +1,168 @@
+.carousel {
+    min-height: 777px;
+    background-color: $carousel-bkg;
+
+    @include tablet {
+        min-height: 624px;
+    }
+
+    @include mobile {
+        min-height: 624px;
+    }
+    
+    &-wrp{
+        margin: 0 auto 128px auto;
+
+        @include mobile {
+            margin: 0 auto 64px auto;
+        }
+
+    }
+
+    &__link {
+        font-size: 14px;
+        line-height: 17px;
+        color: $nav-link;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    &__img{
+        display: block;
+        background-color:transparent;
+        
+        @include tablet {
+            max-height: 624px;
+        }
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: -65px auto 129px auto;
+        background-color: $sales-text-color;
+        border: 1px solid $shiping-line;
+        align-items: center;
+
+        @include tablet {
+            width: 100%;
+            margin: 0 auto 129px auto;
+        }
+
+        @include mobile {
+            margin: 0 auto 64px auto;
+        }
+
+        &_header-colorized {
+            font-size: 14px;
+            line-height: 17px;
+            color: $pink-color;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 64px auto 12px auto;
+        }
+
+        &_header {
+            font-size: 18px;
+            line-height: 22px;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 12px auto 48px auto;
+
+            @include mobile {
+                margin: 12px auto 32px auto;
+            }
+        }
+
+        &_par {
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            margin: 0 auto 32px auto;
+            max-width: 555px;
+
+            @include mobile {
+                max-width: 325px;
+            }
+        }
+
+        &_price {
+            font-size: 24px;
+            line-height: 29px;
+            color: $pink-color;
+            text-align: center;
+            margin: 0 auto 65px auto;;
+
+            @include mobile {
+                margin: 0 auto 32px auto;
+            }
+        }
+
+        &_popup-wrp{
+            flex-direction: row;
+            margin: 65px auto 49px auto;
+        }
+
+        &_btn {
+            // position: relative;
+            background-color: transparent;
+            border: 1px solid $pink-color;
+            padding: 14px 56px 14px 72px;
+            align-items: center;
+            color: $pink-color;
+            font-size: 16px;
+            line-height: 19px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 0 64px 0;
+            cursor: pointer;
+
+            &-img {
+                background: transparent;
+                fill: $pink-color;
+                margin: 0 20px 0 0;
+            }
+
+            &:hover,
+            &:hover &-img {
+                background-color: $btn-hover;
+                color: $sales-text-color;
+                fill: $sales-text-color;
+            }
+
+            &:focus,
+            &:focus &-img {
+                background-color: $btn-hover;
+                color: $sales-text-color;
+                fill: $sales-text-color;
+            }
+
+            &:active,
+            &:active &-img {
+                background-color: $btn-active;
+                color: $sales-text-color;
+                fill: $sales-text-color;
+            }
+        }
+    }
+
+    &__prod-3 {
+
+        @include tablet {
+            display: none;
+        }
+
+        @include mobile {
+            display: list-item;
+        }
+    }
+
+    &__prod-2 {
+
+        @include mobile {
+            display: none;
+        }
+    }
+}

@@ -17,25 +17,24 @@
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 30px;
-        margin: 0 0 48px 0;
+        margin: 0 auto 48px auto;
 
         @include tablet {
             gap: 16px;
-            margin: 0 0 32px 0;
+            margin: 0 auto 32px auto;
         }
 
         @include mobile {
             flex-direction: column;
             align-items: center;
             width: 100%;
-            margin: 0 0 41px 0;
+            margin: 0 auto 41px auto;
         }
     }
 
     &__item {
         width: 31.5%;
-        min-width: 360px;
-        height: 580px;
+        min-width: 340px;
         box-sizing: border-box;
         background-color: $product-item-description;
         transition: 0.5s;

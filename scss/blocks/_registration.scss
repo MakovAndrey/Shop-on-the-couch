@@ -14,12 +14,24 @@
     &__header { 
         min-height: 148px;
         background-color: $pink-bkg;
+        align-items: center;
+
+        &-wrp {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 148px;
+
+            @include mobile {
+                flex-direction: column;
+                justify-content: space-around;
+            }
+        }
     }
 
     &__header-txt {
         text-transform: uppercase;
         text-align: start;
-        padding: 60px 0 0 0;
         color: $pink-color;
 
         @include mobile {
